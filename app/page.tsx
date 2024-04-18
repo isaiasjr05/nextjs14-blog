@@ -9,7 +9,7 @@ export const revalidate = 30; // revalidate at most 30 secs
 
 async function getData() {
   const query = `
-  *[_type == 'blog'] | order(_createdAt asc) {
+  *[_type == 'blog'] | order(_createdAt desc) {
       title,
       smallDescription,
       "currentSlug": slug.current,
